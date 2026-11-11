@@ -1,0 +1,19 @@
+Alisson_Rivas_Portfolio/
+|
+|-- index.html
+|-- README.txt
+|-- PROJECT-STRUCTURE.txt
+|-- .nojekyll
+|
+|-- css/
+|   `-- style.css
+|
+|-- js/
+|   `-- main.js
+|
+`-- assets/
+    |-- profile-photo.webp
+    `-- project-previews/
+        |-- furrylove-preview.svg
+        |-- hush-preview.svg
+        `-- modakids-preview.svg
