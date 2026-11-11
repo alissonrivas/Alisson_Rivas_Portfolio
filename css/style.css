@@ -166,8 +166,27 @@ img { display: block; max-width: 100%; }
 
 /* Projects */
 .projects-section { background: #fff; }
-.project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 17px; align-items: stretch; }
-.project-card { position: relative; display: flex; flex-direction: column; min-width: 0; padding: 24px 22px 22px; background: #fcfbfe; border: 1px solid var(--line); border-radius: 4px 23px 23px 23px; transition: transform .25s, box-shadow .25s, border-color .25s; }
+
+/* Three project cards side by side on desktop */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+  align-items: stretch;
+}
+
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 24px 22px 22px;
+  background: #fcfbfe;
+  border: 1px solid var(--line);
+  border-radius: 4px 23px 23px 23px;
+  transition: transform .25s, box-shadow .25s, border-color .25s;
+}
+
 .project-card::before { content: ""; position: absolute; top: 0; left: 23px; right: 23px; height: 3px; border-radius: 0 0 4px 4px; background: var(--lavender); }
 .project-hush::before { background: #d7a9cc; }
 .project-moda::before { background: #a7bf9d; }
@@ -184,7 +203,7 @@ img { display: block; max-width: 100%; }
 .project-title-note { margin-left: auto; color: #9a8fa5; font: italic .65rem var(--serif); }
 .project-intro { min-height: 98px; margin: 15px 0 20px; color: var(--ink-soft); font-size: .83rem; line-height: 1.8; }
 
-/* PROJECT INFO - Updated horizontal cards */
+/* Project information arranged in horizontal mini-cards */
 .project-info {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -331,11 +350,12 @@ img { display: block; max-width: 100%; }
   .why-copy { padding: 45px; }
   .why-visual { min-height: 390px; }
 
-  /* Projects: two cards per row on tablets */
+  /* Two project cards per row on tablets */
   .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 17px; }
   .project-card { padding: 25px; }
   .project-intro { min-height: 0; }
   .project-title-note { width: auto; margin: 0 0 0 auto; }
+  .project-info { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 
   .preview-grid, .skills-grid { grid-template-columns: 1fr 1fr; }
   .preview-slot:last-child, .skill-card:last-child { grid-column: 1 / -1; }
@@ -386,14 +406,12 @@ img { display: block; max-width: 100%; }
   .chip-journey { left: 9%; }
   .visual-caption { right: 6%; bottom: 9%; font-size: .72rem; }
 
-  /* Projects: one card per row on mobile */
+  /* One project card per row on small mobile screens */
   .project-grid { grid-template-columns: 1fr; }
   .project-card { padding: 22px 19px; }
   .project-category { font-size: .45rem; }
   .project-title-row h3 { font-size: 1.55rem; }
   .project-title-note { margin-left: 49px; }
-
-  /* Project information remains in two columns when space allows */
   .project-info { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
   .project-info > div { padding: 10px; }
   .project-info > div:last-child { grid-column: 1 / -1; }
